@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1em 0;
+}
+
+/* code {
+    white-space: pre-wrap;
+} */
+
+.explanation, .view {
+    flex-basis: 45%;
+}
+
+.step {
+    display: block;
+    text-align: center;
+}
+
+.step > div {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.step > div code {
+    flex-basis: 33%;
+    text-align: left;
+}
+
+button {
+    margin: 0 auto;
+}
