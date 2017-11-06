@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How to forEach</h1>
+    <main>
+        <section>
+            <div class="explanation">
+                The first thing you need for a forEach loop is an array to use it on. Let's use this one here.
+            </div>
+            <div class="view">
+                <code class="written">var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</code>
+            </div>
+        </section>
+
+        <section>
+            <div class="explanation">
+                The next thing to understand is that forEach is a method that can only be used on arrays. As with other methods, the way you utilize it is with dot notation (because it's a method) and parentheses (because methods are functions and you need parentheses to call functions).
+            </div>
+            <div class="view">
+                <code class="written">
+                    cats.forEach();
+                </code>
+                <code class="values">
+                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+                </code>
+            </div>
+        </section>
+
+        <section>
+            <div class="explanation">
+                However, this isn't enough for forEach. This method takes a function as an argument. In other words, we need to put a function inside those parentheses.
+            </div>
+            <div class="view">
+                <code class="written">
+                    cats.forEach(function() {
+
+                    });
+                </code>
+                <code class="values">
+                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+                </code>
+            </div>
+        </section>
+
+        <section>
+            <div class="explanation">
+                This might be starting to look kinda funky, but let's add one more layer. The function within the forEach loop also requires a parameter. This parameter will represent each item in the array as the loop iterates. You can name it whatever you want, but standard practice is to give you array a plural name (like "cats") and give your parameter the corresponding singular name (like "cats").
+            </div>
+            <div class="view">
+                <code class="written">
+                    cats.forEach(function(cat) {
+
+                    });
+                </code>
+                <code class="values">
+                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+                </code>
+            </div>
+        </section>
+
+        <section>
+            <div class="explanation">
+                The reason why we generally do things this way is because for every iteration of our forEach loop, the parameter we name in our function will represent each individual item in the array. Anything we write in the code block is what we want to have happen to each item in the array. Let's start simple. 
+            </div>
+            <div class="view">
+                <code class="written">
+                    cats.forEach(function(cat) {
+                        console.log(cats);
+                    });
+                </code>
+                <code class="values">
+                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+                </code>
+            </div>
+        </section>
+        <section>
+            <div class="step">Click the button to step through each iteration of the array.</div>
+            <div class="step">
+                <code class="written">
+                    cats.forEach(function(cat) {
+                        console.log(cats);
+                    });
+                </code>
+                <code class="values">
+                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+                    cat = cats[0] = "siamese";
+                </code>
+                <code class="console">
+                    "siamese"
+                </code>
+                <button>Step</button>
+            </div>
+        </section>
+        <section>
+            <div class="explanation"></div>
+            <div class="view"></div>
+        </section>
+        <section>
+            <div class="explanation"></div>
+            <div class="view"></div>
+        </section>
+        <section>
+            <div class="explanation"></div>
+            <div class="view"></div>
+        </section>
+        <section>
+            <div class="explanation"></div>
+            <div class="view"></div>
+        </section>
+        <section>
+            <div class="explanation"></div>
+            <div class="view"></div>
+        </section>
+        <section>
+            <div class="explanation"></div>
+            <div class="view"></div>
+        </section>
+        <section>
+            <div class="explanation"></div>
+            <div class="view"></div>
+        </section>
+    </main>
+</body>
+</html>
