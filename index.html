@@ -15,7 +15,7 @@
                 The first thing you need for a forEach loop is an array to use it on. Let's use this one here.
             </div>
             <div class="view">
-                <code class="written">var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</code>
+                <pre class="written">var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
 
@@ -24,12 +24,11 @@
                 The next thing to understand is that forEach is a method that can only be used on arrays. As with other methods, the way you utilize it is with dot notation (because it's a method) and parentheses (because methods are functions and you need parentheses to call functions).
             </div>
             <div class="view">
-                <code class="written">
-                    cats.forEach();
-                </code>
-                <code class="values">
-                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
-                </code>
+                <pre class="written">
+cats.forEach();
+                </pre>
+                <pre class="values">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
 
@@ -38,14 +37,13 @@
                 However, this isn't enough for forEach. This method takes a function as an argument. In other words, we need to put a function inside those parentheses.
             </div>
             <div class="view">
-                <code class="written">
-                    cats.forEach(function() {
+                <pre class="written">
+cats.forEach(function() {
 
-                    });
-                </code>
-                <code class="values">
-                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
-                </code>
+});
+                </pre>
+                <pre class="values">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
 
@@ -54,14 +52,13 @@
                 This might be starting to look kinda funky, but let's add one more layer. The function within the forEach loop also requires a parameter. This parameter will represent each item in the array as the loop iterates. You can name it whatever you want, but standard practice is to give your array a plural name (like "cats") and give your parameter the corresponding singular name (like "cat").
             </div>
             <div class="view">
-                <code class="written">
-                    cats.forEach(function(cat) {
+                <pre class="written">
+cats.forEach(function(cat) {
 
-                    });
-                </code>
-                <code class="values">
-                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
-                </code>
+});
+                </pre>
+                <pre class="values">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
 
@@ -70,34 +67,27 @@
                 The reason why we generally do things this way is because for every iteration of our forEach loop, the parameter we name in our function will represent each individual item in the array. Anything we write in the code block is what we want to have happen to each item in the array. Let's start simple. 
             </div>
             <div class="view">
-                <code class="written">
-                    cats.forEach(function(cat) {
-                        console.log(cats);
-                    });
-                </code>
-                <code class="values">
-                    var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
-                </code>
+                <pre class="written">
+cats.forEach(function(cat) {
+    console.log(cats);
+});
+                </pre>
+                <pre class="values">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
         <section class="step">
             <div>Click the button to step through each iteration of the array. The values column just shows what's going on under the hood--it's nothing you'd have to explicitly write yourself.</div>
             <div>
-                <code class="written">
-                    var <strong>cats</strong> = ["<span class="0">siamese</span>", "<span class="1">persian</span>", "<span class="2">manx</span>", "<span class="3">maine coon</span>", "<span class="4">tabby</span>"];
+                <pre class="written">
+var <strong>cats</strong> = ["<span class="0">siamese</span>", "<span class="1">persian</span>", "<span class="2">manx</span>", "<span class="3">maine coon</span>", "<span class="4">tabby</span>"];
 
-                    <strong>cats</strong>.forEach(function(<em>cat</em>) {
-                        console.log(<em>cat</em>);
-                    });
-                </code>
-                <code class="values">
-                    <em>cat</em> = cats[<span id="currentIndex">0</span>] = "<span id="currentArrVal"><em>siamese</em></span>";
-                </code>
-                <code class="console">
-                    <div id="output">
-                        <span class="0">siamese</span>
-                    </div>
-                </code>
+<strong>cats</strong>.forEach(function(<em>cat</em>) {
+    console.log(<em>cat</em>);
+});</pre>
+                <pre class="values">
+<em>cat</em> = cats[<span id="currentIndex">0</span>] = "<span id="currentArrVal"><em>siamese</em></span>";</pre>
+                <pre class="console"><div id="output"><span class="0">siamese</span></div></pre>
             </div>
             <button onclick="increment()">Step</button><button onclick="reset()">Reset</button>
         </section>

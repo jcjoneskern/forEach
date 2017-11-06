@@ -1,17 +1,58 @@
 body {
     font-family: sans-serif;
+    /* background-color: #bcb7bf; */
+    background: #d5d0d8;
+}
+
+h1 {
+    text-align: center;
 }
 
 section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 1em 0;
+    margin: 1em auto;
+    background: #fff;
+    padding: 1em;
+    width: 90%;
 }
 
-/* code {
+pre {
     white-space: pre-wrap;
-} */
+    margin: 0;
+    background: #454347;
+    color: #fff;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.values::before {
+    content: "Variable values:";
+    display: block;
+    background: #6d6a70;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.5em;
+    padding: 3px;
+}
+
+.written::before {
+    content: "Script:";
+    display: block;
+    background: #6d6a70;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.5em;
+    padding: 3px;
+}
+
+.console::before {
+    content: "Console:";
+    display: block;
+    background: #6d6a70;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.5em;
+    padding: 3px;
+}
 
 .explanation, .view {
     flex-basis: 45%;
@@ -29,11 +70,7 @@ section {
     justify-content: space-between;
 }
 
-.step > div code {
+.step > div pre {
     flex-basis: 33%;
     text-align: left;
-}
-
-button {
-    margin: 0 auto;
 }
