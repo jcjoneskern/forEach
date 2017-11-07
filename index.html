@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>forEach</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,10 +25,10 @@
             </div>
             <div class="view">
                 <pre class="written">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+
 cats.forEach();
                 </pre>
-                <pre class="values">
-var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
 
@@ -38,12 +38,12 @@ var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
             <div class="view">
                 <pre class="written">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+
 cats.forEach(function() {
 
 });
                 </pre>
-                <pre class="values">
-var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
 
@@ -53,12 +53,12 @@ var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
             <div class="view">
                 <pre class="written">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+
 cats.forEach(function(cat) {
 
 });
                 </pre>
-                <pre class="values">
-var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
 
@@ -68,30 +68,37 @@ var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
             <div class="view">
                 <pre class="written">
+var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];
+
 cats.forEach(function(cat) {
     console.log(cats);
 });
                 </pre>
-                <pre class="values">
-var cats = ["siamese", "persian", "manx", "maine coon", "tabby"];</pre>
             </div>
         </section>
         <section class="step">
-            <div>Click the button to step through each iteration of the array. The values column just shows what's going on under the hood--it's nothing you'd have to explicitly write yourself.</div>
+            <div>Click the button to step through each iteration of the array. The values column just shows what's going on under the hood--it's nothing you'd have to explicitly write yourself. The color coding indicates the current value in the array for each step.</div>
             <div>
                 <pre class="written">
 var <strong>cats</strong> = ["<span class="0">siamese</span>", "<span class="1">persian</span>", "<span class="2">manx</span>", "<span class="3">maine coon</span>", "<span class="4">tabby</span>"];
 
-<strong>cats</strong>.forEach(function(<em>cat</em>) {
-    console.log(<em>cat</em>);
+<strong>cats</strong>.forEach(function(<span class="current">cat</span>) {
+    console.log(<span class="current">cat</span>);
 });</pre>
                 <pre class="values">
-<em>cat</em> = cats[<span id="currentIndex">0</span>] = "<span id="currentArrVal"><em>siamese</em></span>";</pre>
+<span class="current">cat</span> = <strong>cats</strong>[<span id="currentIndex">0</span>] = "<span class="currentArrVal current">siamese</span>";
+
+<strong>cats</strong>.forEach(function("<span class="currentArrVal current">siamese</span>") { 
+    console.log("<span class="currentArrVal current">siamese</span>");
+});</pre>
                 <pre class="console"><div id="output"><span class="0">siamese</span></div></pre>
             </div>
-            <button onclick="increment()">Step</button><button onclick="reset()">Reset</button>
+            <button id="inc" onclick="increment()">Step</button><button id="reset" onclick="reset()">Reset</button>
         </section>
-        <!-- <section>
+        <!-- 
+            maybe i'll put something about properties in here someday
+            or es6 syntax
+        <section>
             <div class="explanation"></div>
             <div class="view"></div>
         </section>

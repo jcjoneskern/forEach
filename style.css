@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
-    /* background-color: #bcb7bf; */
     background: #d5d0d8;
+    color: #454347;
 }
 
 h1 {
@@ -12,10 +12,11 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 1em auto;
+    margin: 1.25em auto;
     background: #fff;
     padding: 1em;
     width: 90%;
+    box-shadow: 5px 5px 10px #bcb7bf;
 }
 
 pre {
@@ -25,6 +26,35 @@ pre {
     color: #fff;
     padding: 0.5em;
     box-sizing: border-box;
+}
+
+button {
+    background: #454347;
+    border: 0;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: #6d6a70;
+}
+
+button:active {
+    background: #565458;
+}
+
+button:disabled {
+    background: #9d9aa1;
+    color: #fff!important;
+}
+
+#inc {
+    color: #e2aff7;
+}
+
+#reset {
+    color: #fff;
 }
 
 .values::before {
@@ -65,12 +95,29 @@ pre {
 
 .step > div {
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: stretch;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    margin-bottom: 1em;
 }
 
 .step > div pre {
     flex-basis: 33%;
     text-align: left;
+
+}
+
+.current {
+    color: #e2aff7;
+}
+
+@media (max-width: 768px) {
+    section, .step > div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    pre {
+        margin-top: 1em; 
+    }
 }
